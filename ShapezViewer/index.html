@@ -1,233 +1,28 @@
+
 <!DOCTYPE html>
-<html><head><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, embed[type="application/pdf"] {
-    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
-}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
-  background-color: var(--darkreader-inline-bgcolor) !important;
-}
-[data-darkreader-inline-bgimage] {
-  background-image: var(--darkreader-inline-bgimage) !important;
-}
-[data-darkreader-inline-border] {
-  border-color: var(--darkreader-inline-border) !important;
-}
-[data-darkreader-inline-border-bottom] {
-  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
-}
-[data-darkreader-inline-border-left] {
-  border-left-color: var(--darkreader-inline-border-left) !important;
-}
-[data-darkreader-inline-border-right] {
-  border-right-color: var(--darkreader-inline-border-right) !important;
-}
-[data-darkreader-inline-border-top] {
-  border-top-color: var(--darkreader-inline-border-top) !important;
-}
-[data-darkreader-inline-boxshadow] {
-  box-shadow: var(--darkreader-inline-boxshadow) !important;
-}
-[data-darkreader-inline-color] {
-  color: var(--darkreader-inline-color) !important;
-}
-[data-darkreader-inline-fill] {
-  fill: var(--darkreader-inline-fill) !important;
-}
-[data-darkreader-inline-stroke] {
-  stroke: var(--darkreader-inline-stroke) !important;
-}
-[data-darkreader-inline-outline] {
-  outline-color: var(--darkreader-inline-outline) !important;
-}
-[data-darkreader-inline-stopcolor] {
-  stop-color: var(--darkreader-inline-stopcolor) !important;
-}</style><style class="darkreader darkreader--variables" media="screen">:root {
-   --darkreader-neutral-background: #131516;
-   --darkreader-neutral-text: #d8d4cf;
-   --darkreader-selection-background: #004daa;
-   --darkreader-selection-text: #e8e6e3;
-}</style><script class="darkreader darkreader--proxy">(function injectProxy() {
-        document.dispatchEvent(
-            new CustomEvent("__darkreader__inlineScriptsAllowed")
-        );
-        const addRuleDescriptor = Object.getOwnPropertyDescriptor(
-            CSSStyleSheet.prototype,
-            "addRule"
-        );
-        const insertRuleDescriptor = Object.getOwnPropertyDescriptor(
-            CSSStyleSheet.prototype,
-            "insertRule"
-        );
-        const deleteRuleDescriptor = Object.getOwnPropertyDescriptor(
-            CSSStyleSheet.prototype,
-            "deleteRule"
-        );
-        const removeRuleDescriptor = Object.getOwnPropertyDescriptor(
-            CSSStyleSheet.prototype,
-            "removeRule"
-        );
-        const cleanUp = () => {
-            Object.defineProperty(
-                CSSStyleSheet.prototype,
-                "addRule",
-                addRuleDescriptor
-            );
-            Object.defineProperty(
-                CSSStyleSheet.prototype,
-                "insertRule",
-                insertRuleDescriptor
-            );
-            Object.defineProperty(
-                CSSStyleSheet.prototype,
-                "deleteRule",
-                deleteRuleDescriptor
-            );
-            Object.defineProperty(
-                CSSStyleSheet.prototype,
-                "removeRule",
-                removeRuleDescriptor
-            );
-            document.removeEventListener("__darkreader__cleanUp", cleanUp);
-            document.removeEventListener(
-                "__darkreader__addUndefinedResolver",
-                addUndefinedResolver
-            );
-        };
-        const addUndefinedResolver = (e) => {
-            customElements.whenDefined(e.detail.tag).then(() => {
-                document.dispatchEvent(
-                    new CustomEvent("__darkreader__isDefined", {
-                        detail: {tag: e.detail.tag}
-                    })
-                );
-            });
-        };
-        document.addEventListener("__darkreader__cleanUp", cleanUp);
-        document.addEventListener(
-            "__darkreader__addUndefinedResolver",
-            addUndefinedResolver
-        );
-        const updateSheetEvent = new Event("__darkreader__updateSheet");
-        function proxyAddRule(selector, style, index) {
-            addRuleDescriptor.value.call(this, selector, style, index);
-            if (
-                this.ownerNode &&
-                !this.ownerNode.classList.contains("darkreader")
-            ) {
-                this.ownerNode.dispatchEvent(updateSheetEvent);
-            }
-            return -1;
-        }
-        function proxyInsertRule(rule, index) {
-            const returnValue = insertRuleDescriptor.value.call(
-                this,
-                rule,
-                index
-            );
-            if (
-                this.ownerNode &&
-                !this.ownerNode.classList.contains("darkreader")
-            ) {
-                this.ownerNode.dispatchEvent(updateSheetEvent);
-            }
-            return returnValue;
-        }
-        function proxyDeleteRule(index) {
-            deleteRuleDescriptor.value.call(this, index);
-            if (
-                this.ownerNode &&
-                !this.ownerNode.classList.contains("darkreader")
-            ) {
-                this.ownerNode.dispatchEvent(updateSheetEvent);
-            }
-        }
-        function proxyRemoveRule(index) {
-            removeRuleDescriptor.value.call(this, index);
-            if (
-                this.ownerNode &&
-                !this.ownerNode.classList.contains("darkreader")
-            ) {
-                this.ownerNode.dispatchEvent(updateSheetEvent);
-            }
-        }
-        Object.defineProperty(
-            CSSStyleSheet.prototype,
-            "addRule",
-            Object.assign({}, addRuleDescriptor, {value: proxyAddRule})
-        );
-        Object.defineProperty(
-            CSSStyleSheet.prototype,
-            "insertRule",
-            Object.assign({}, insertRuleDescriptor, {value: proxyInsertRule})
-        );
-        Object.defineProperty(
-            CSSStyleSheet.prototype,
-            "deleteRule",
-            Object.assign({}, deleteRuleDescriptor, {value: proxyDeleteRule})
-        );
-        Object.defineProperty(
-            CSSStyleSheet.prototype,
-            "removeRule",
-            Object.assign({}, removeRuleDescriptor, {value: proxyRemoveRule})
-        );
-    })()</script><style class="darkreader darkreader--user-agent" media="screen">html {
-    background-color: #181a1b !important;
-}
-html, body, input, textarea, select, button {
-    background-color: #181a1b;
-}
-html, body, input, textarea, select, button {
-    border-color: #736b5e;
-    color: #e8e6e3;
-}
-a {
-    color: #3391ff;
-}
-table {
-    border-color: #545b5e;
-}
-::placeholder {
-    color: #b2aba1;
-}
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-select:-webkit-autofill {
-    background-color: #555b00 !important;
-    color: #e8e6e3 !important;
-}
-::-webkit-scrollbar {
-    background-color: #202324;
-    color: #aba499;
-}
-::-webkit-scrollbar-thumb {
-    background-color: #454a4d;
-}
-::-webkit-scrollbar-thumb:hover {
-    background-color: #575e62;
-}
-::-webkit-scrollbar-thumb:active {
-    background-color: #484e51;
-}
-::-webkit-scrollbar-corner {
-    background-color: #181a1b;
-}
-::selection {
-    background-color: #004daa !important;
-    color: #e8e6e3 !important;
-}
-::-moz-selection {
-    background-color: #004daa !important;
-    color: #e8e6e3 !important;
-}</style>
+<html>
+  <head>
     <title>shapez.io shape generator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="index.css" media="all"><style class="darkreader darkreader--sync" media="screen"></style>
-    <script async="" src="index.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="https://shapez.io/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" media="all" />
+    <script async src="index.js"></script>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://shapez.io/favicon.ico"
+    />
 
     <!-- just include all variants for ease of use -->
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FCFW3W6WL0"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-FCFW3W6WL0"
+    ></script>
 
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -238,17 +33,10 @@ select:-webkit-autofill {
 
       gtag("config", "G-FCFW3W6WL0", { anonymizeIp: true });
     </script>
-  <meta name="darkreader" content="3d79bda4dc4d231388e0dc6d96b3d019"><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
-    background-color: #7b5300 !important;
-    border-color: #d8b013 !important;
-    color: #f3e8c8 !important;
-}
-::placeholder {
-    opacity: 0.5 !important;
-}</style></head>
+  </head>
   <body>
     <a href="https://steam.shapez.io" target="_blank">
-      <img id="logo" src="logo.png">
+      <img id="logo" src="logo.png" />
     </a>
     <h1>Shape viewer</h1>
     <!-- 
@@ -268,9 +56,18 @@ select:-webkit-autofill {
 
     <div class="grid">
       <div class="col">
-        <input value="CuCuCuCu" id="code" placeholder="shape code" onkeypress="debounce(generate)" onkeydown="debounce(generate)" onkeyup="debounce(generate)" onchange="debounce(generate)">
-        <div id="error">Shape generated</div>
-        <br>
+        <input
+          value="CuCuCuCu"
+          id="code"
+          placeholder="shape code"
+          onkeypress="debounce(generate)"
+          onkeydown="debounce(generate)"
+          onkeyup="debounce(generate)"
+          onchange="debounce(generate)"
+        />
+        <div id="error">Error</div>
+        <br />
+
         <div id="resultWrapper">
           <canvas id="canvas" width="512" height="512"></canvas>
           <canvas id="canvas1" width="125" height="125"></canvas>
@@ -296,14 +93,14 @@ select:-webkit-autofill {
           consists of up to 4 layers, and each layers consists of 4 quadrants.
           Shape codes start from the upper right quadrant and move clockwise.
         </p>
-        <br>
+        <br />
         <p>
           Each quadrant is described via a pair of letters - An
           <strong>uppercase letter describing the shape</strong>, followed by a
           <strong>lowercase letter describing its color</strong>. If the
           quadrant is empty, <code>--</code> is used
         </p>
-        <br>
+        <br />
         <p>
           Layers are separated via <code>:</code>, starting with the lowest
           layer.
@@ -324,47 +121,47 @@ select:-webkit-autofill {
             <ul>
               <li>
                 <code>r</code>
-                <span class="colorPreview" style="background: rgb(255, 102, 106); --darkreader-inline-bgimage: initial; --darkreader-inline-bgcolor:#8f0004;" data-darkreader-inline-bgimage="" data-darkreader-inline-bgcolor=""></span>
+                <span class="colorPreview" style="background: #ff666a"></span>
                 Red
               </li>
               <li>
                 <code>g</code>
-                <span class="colorPreview" style="background: rgb(120, 255, 102); --darkreader-inline-bgimage: initial; --darkreader-inline-bgcolor:#308f00;" data-darkreader-inline-bgimage="" data-darkreader-inline-bgcolor=""></span>
+                <span class="colorPreview" style="background: #78ff66"></span>
                 Green
               </li>
               <li>
                 <code>b</code>
-                <span class="colorPreview" style="background: rgb(102, 167, 255); --darkreader-inline-bgimage: initial; --darkreader-inline-bgcolor:#003d8f;" data-darkreader-inline-bgimage="" data-darkreader-inline-bgcolor=""></span>
+                <span class="colorPreview" style="background: #66a7ff"></span>
                 Blue
               </li>
 
               <li>
                 <code>y</code>
-                <span class="colorPreview" style="background: rgb(252, 245, 42); --darkreader-inline-bgimage: initial; --darkreader-inline-bgcolor:#b2ac03;" data-darkreader-inline-bgimage="" data-darkreader-inline-bgcolor=""></span>
+                <span class="colorPreview" style="background: #fcf52a"></span>
                 Yellow
               </li>
 
               <li>
                 <code>p</code>
-                <span class="colorPreview" style="background: rgb(221, 102, 255); --darkreader-inline-bgimage: initial; --darkreader-inline-bgcolor:#6f008f;" data-darkreader-inline-bgimage="" data-darkreader-inline-bgcolor=""></span>
+                <span class="colorPreview" style="background: #dd66ff"></span>
                 Purple
               </li>
 
               <li>
                 <code>c</code>
-                <span class="colorPreview" style="background: rgb(0, 252, 255); --darkreader-inline-bgimage: initial; --darkreader-inline-bgcolor:#00cacc;" data-darkreader-inline-bgimage="" data-darkreader-inline-bgcolor=""></span>
+                <span class="colorPreview" style="background: #00fcff"></span>
                 Cyan
               </li>
 
               <li>
                 <code>u</code>
-                <span class="colorPreview" style="background: rgb(170, 170, 170); --darkreader-inline-bgimage: initial; --darkreader-inline-bgcolor:#484e51;" data-darkreader-inline-bgimage="" data-darkreader-inline-bgcolor=""></span>
+                <span class="colorPreview" style="background: #aaaaaa"></span>
                 Uncolored
               </li>
 
               <li>
                 <code>w</code>
-                <span class="colorPreview" style="background: rgb(255, 255, 255); --darkreader-inline-bgimage: initial; --darkreader-inline-bgcolor:#181a1b;" data-darkreader-inline-bgimage="" data-darkreader-inline-bgcolor=""></span>
+                <span class="colorPreview" style="background: #ffffff"></span>
                 White
               </li>
             </ul>
@@ -390,26 +187,6 @@ select:-webkit-autofill {
             `);
           }
         </script>
-                <div class="example">
-                    <code>CwCwCwCw</code><label>White circle</label>
-                    <button onclick="viewShape(&quot;CwCwCwCw&quot;)">View</button>
-                    </div>
-            
-                <div class="example">
-                    <code>----RuRu</code><label>Half rectangle</label>
-                    <button onclick="viewShape(&quot;----RuRu&quot;)">View</button>
-                    </div>
-            
-                <div class="example">
-                    <code>CgScScCg</code><label>Circles and stars mixed</label>
-                    <button onclick="viewShape(&quot;CgScScCg&quot;)">View</button>
-                    </div>
-            
-                <div class="example">
-                    <code>RpRpRpRp:CwCwCwCw</code><label>Layering example</label>
-                    <button onclick="viewShape(&quot;RpRpRpRp:CwCwCwCw&quot;)">View</button>
-                    </div>
-            
         <div class="example">
           <code></code><label>Random Shape</label>
           <button onclick="randomShape()">Randomize</button>
@@ -420,8 +197,12 @@ select:-webkit-autofill {
     <div class="footer">
       <a target="_blank" href="https://steam.shapez.io/">Steam Page</a> |
       <a target="_blank" href="https://discord.com/invite/HN7EVzV">Discord</a> |
-      <a target="_blank" href="https://github.com/tobspr/shapez.io">Github</a>
+      <a
+        target="_blank"
+        href="https://github.com/tobspr/shapez.io"
+        target="_blank"
+        >Github</a
+      >
     </div>
-  
-
-</body></html>
+  </body>
+</html>
