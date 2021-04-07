@@ -121,7 +121,11 @@ function fromShortKey(key) {
 
     let layers = [];
     for (let i = 0; i < sourceLayers.length; ++i) {
-        const text = sourceLayers[i];
+        var text = sourceLayers[i];
+        if (text.length %2 ==1){
+            text += 'u';
+        }
+        text = text.padEnd(8,'-');
         if (text.length !== 8) {
             throw new Error("Invalid layer: '" + text + "' -> must be 8 characters");
         }
