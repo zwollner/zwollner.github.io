@@ -339,7 +339,7 @@ window.addEventListener("load", () => {
 });
 
 window.exportShape = () => {
-    const canvas = document.getElementById("result");
+    const canvas = document.getElementById("canvas");
     const imageURL = canvas.toDataURL("image/png");
 
     const dummyLink = document.createElement("a");
@@ -359,7 +359,7 @@ window.viewShape = key => {
 
 window.shareShape = () => {
     const code = document.getElementById("code").value.trim();
-    const url = "https://viewer.shapez.io?" + code.replace(/:/gi, ".");
+    const url = "https://zwollner.github.io/ShapezViewer?" + code.replace(/:/gi, ".");
     alert("You can share this url: " + url);
 };
 
