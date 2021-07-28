@@ -110,6 +110,7 @@ function radians(degrees) {
     return (degrees * Math.PI) / 180.0;
 }
 
+var generated = "";
 /**
  * Generates the definition from the given short key
  */
@@ -118,11 +119,11 @@ function fromShortKey(key) {
     if (sourceLayers.length > maxLayer) {
         throw new Error("Only " + maxLayer + " layers allowed");
     }
-
+generated = '';
     let layers = [];
     for (let i = 0; i < sourceLayers.length; ++i) {
         var text = sourceLayers[i];
-        if (text.length %2 ==1){
+        if (text.length %2 === 1){
             text += 'u';
         }
         text = text.padEnd(8,'-');
@@ -137,6 +138,8 @@ function fromShortKey(key) {
         if (!layerRegex.test(text)) {
             throw new Error("Invalid syntax in layer " + (i + 1));
         }
+        
+        generated += text;
 
         const quads = [null, null, null, null];
         for (let quad = 0; quad < 4; ++quad) {
@@ -158,7 +161,17 @@ function fromShortKey(key) {
         layers.push(quads);
     }
 
+
     return layers;
+}
+
+function updateScale(value) {
+    var max=512;
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    canvas.height = max * value;
+    canvas.width = max * value;
+    generate();
 }
 
 function renderShape(layers) {
@@ -169,8 +182,8 @@ function renderShape(layers) {
         context.save();
         context.fillStyle = "#fff";
 
-        const w = ctxIndex == 0 ? 512 : 128;
-        const h = ctxIndex == 0 ? 512 : 128;
+        const w = context.canvas.width;
+        const h = context.canvas.height;
 
         const dpi = 1;
         context.clearRect(0, 0, w, h);
@@ -183,9 +196,9 @@ function renderShape(layers) {
         const quadrantSize = 10;
         const quadrantHalfSize = quadrantSize / 2;
 
-        context.fillStyle = "rgba(40, 50, 65, 0.1)";
-        context.beginCircle(0, 0, quadrantSize * 1.15);
-        context.fill();
+        //context.fillStyle = "rgba(40, 50, 65, 0.1)";
+        //context.beginCircle(0, 0, quadrantSize * 1.15);
+       // context.fill();
 
         for (let layerIndex = 0; layerIndex < layers.length; ++layerIndex) {
             if (ctxIndex == 0 || layerIndex + 1 == ctxIndex) {
@@ -300,7 +313,7 @@ function showError(msg) {
     if (msg) {
         errorDiv.innerText = msg;
     } else {
-        errorDiv.innerText = "Shape generated";
+        errorDiv.innerText = "Shape generated: (" + generated +")";
     }
 }
 
